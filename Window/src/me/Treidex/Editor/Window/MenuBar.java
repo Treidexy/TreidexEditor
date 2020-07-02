@@ -1,10 +1,13 @@
 package me.Treidex.Editor.Window;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-public class MenuBar extends JMenuBar {
+public class MenuBar extends JMenuBar implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	
 	public static MenuBar $this;
@@ -40,5 +43,12 @@ public class MenuBar extends JMenuBar {
 		$this.run = new JMenu("Run");
 		
 		$this.add($this.run);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == file_new) {
+			// TODO New File
+		}
 	}
 }

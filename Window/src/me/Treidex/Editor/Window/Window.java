@@ -1,12 +1,11 @@
 package me.Treidex.Editor.Window;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 
 import javax.swing.JFrame;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 
 public class Window extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -25,6 +24,7 @@ public class Window extends JFrame {
 		setName(name);
 		setSize(width, height);
 		setResizable(resizable);
+		getContentPane().setBackground(Color.decode("#333232"));
 		
 		if (resizable)
 			addComponentListener(new ComponentAdapter() 
@@ -36,12 +36,6 @@ public class Window extends JFrame {
 				    resizeWindow(c.getWidth(), c.getHeight());
 				}
 			});
-		
-		try {
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-			e.printStackTrace();
-		}
 	}
 	
 	public void Create() {
