@@ -1,0 +1,13 @@
+package me.Treidex.Editor.Window;
+
+import javax.swing.JFrame;
+
+public class Window extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	public int width, height;
+	
+	public Window(String name, int width, int height) {
+		
+	}
+}

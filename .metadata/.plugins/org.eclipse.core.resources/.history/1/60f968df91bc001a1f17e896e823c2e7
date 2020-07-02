@@ -1,0 +1,3 @@
+module Window {
+	requires java.base;
+}

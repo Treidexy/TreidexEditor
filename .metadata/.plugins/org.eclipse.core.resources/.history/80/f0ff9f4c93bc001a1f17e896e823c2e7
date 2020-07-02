@@ -1,0 +1,36 @@
+package me.Treidex.Editor.Window;
+
+import javax.swing.JFrame;
+
+public class Window extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	public String name;
+	public int width, height;
+	
+	public boolean resizable;
+	
+	public Window(String name, int width, int height, final boolean resizable) {
+		this.name = name;
+		this.width = width;
+		this.height = height;
+		this.resizable = resizable;
+		
+		setName(name);
+		setSize(width, height);
+		setResizable(resizable);
+		
+		if (resizable)
+			addComponentListener(new ComponentAdapter() 
+			{  
+			        public void componentResized(ComponentEvent evt) {
+			            Component c = (Component)evt.getSource();
+			            //........
+			        }
+			});
+	}
+	
+	public void Create() {
+		setVisible(true);
+	}
+}

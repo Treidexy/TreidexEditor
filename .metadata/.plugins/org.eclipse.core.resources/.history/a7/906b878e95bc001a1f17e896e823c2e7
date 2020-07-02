@@ -1,0 +1,20 @@
+package me.Treidex.Editor.Window;
+
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+
+public class MenuBar extends JMenuBar {
+	private static final long serialVersionUID = 1L;
+	
+	public static JMenu file;
+	public static JMenu edit;
+	public static JMenu run;
+	
+	private MenuBar() {}
+	
+	public static void Initialize() {
+		file = new JMenu("File");
+		edit = new JMenu("Edit");
+		run = new JMenuItem("Run");
+	}
+}

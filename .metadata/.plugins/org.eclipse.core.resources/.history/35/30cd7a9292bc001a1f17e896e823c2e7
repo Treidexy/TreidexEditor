@@ -1,0 +1,22 @@
+package me.Treidex.Editor.Window;
+
+import javax.swing.JFrame;
+
+public class Window extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	public String name;
+	public int width, height;
+	
+	public Window(String name, int width, int height) {
+		this.name = name;
+		this.width = width;
+		this.height = height;
+		
+		setSize(width, height);
+	}
+	
+	public void Create() {
+		setVisible(true);
+	}
+}
