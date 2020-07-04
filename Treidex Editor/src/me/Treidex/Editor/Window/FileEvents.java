@@ -1,4 +1,4 @@
-package me.Treidex.Editor.Events;
+package me.Treidex.Editor.Window;
 
 import java.io.File;
 import java.io.FileInputStream;
